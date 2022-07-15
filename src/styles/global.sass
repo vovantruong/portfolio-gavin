@@ -1,0 +1,46 @@
+=w
+    @media only screen and (max-width: "1419px")
+        @content
+=x
+    @media only screen and (max-width: "1339px")
+        @content
+=d
+    @media only screen and (max-width: "1179px")
+        @content
+=t
+    @media only screen and (max-width: "1023px")
+        @content 
+=m
+    @media only screen and (max-width: "767px")
+        @content
+=a
+    @media only screen and (max-width: "639px")
+        @content
+=s
+    @media only screen and (max-width: "474px")
+        @content
+
+// color
+
+$white: #ffffff
+$black: #000
+$violet: #AE2AFF
+$grayviolet: #7979B2
+$cyan: #67C8FF
+$grayblue: #2C2A6D
+$darkblue: #161533
+
+$textdark: #7979B2
+$textlight: #8C9BDB
+$bgdark: #05050F
+$bglight: #FAFAFA
+
+
+//font
+=teko
+    font-family: 'Teko', sans-serif
+
+// theme
+=dark
+    @at-root :global(.dark-mode) &
+        @content

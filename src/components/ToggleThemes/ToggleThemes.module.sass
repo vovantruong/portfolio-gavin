@@ -1,0 +1,30 @@
+@import ../../styles/app
+.toggle-theme
+    display: inline-block
+    position: fixed
+    top: 3rem
+    left: 3rem
+    z-index: 100
+    button
+        position: relative
+        border: 0.3rem solid $cyan
+        border-radius: 10rem
+        width: 6rem
+        height: 2.7rem
+        display: flex
+        align-items: center
+        img
+            position: absolute
+            left: 0.3rem
+            z-index: 1
+            height: 90%
+            transition: all .3s ease-in-out
+        +dark
+            border-color: $violet
+            img
+                left: 3.4rem
+    +m
+        right: 2rem
+        top: 2rem
+        left: unset
+
