@@ -1,5 +1,6 @@
-import ToggleThemes from "./components/ToggleThemes";
-import DefaultLayout from "./layout";
+import ToggleThemes from "./components/ToggleThemes/ToggleThemes";
+import DefaultLayout from "./layout/DefaultLayout";
+import Home from "./screens/Home/Home";
 
 function App() {
   const darkmode = JSON.parse(localStorage.getItem('dark-mode-enabled')) ? true : false;
@@ -9,10 +10,9 @@ function App() {
   return (
     <div className="App">
       <ToggleThemes />
-      <DefaultLayout />
-      <div>
-
-      </div>
+      <DefaultLayout >
+        <Home />
+      </DefaultLayout>
     </div>
   );
 }

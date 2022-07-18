@@ -2,16 +2,19 @@ import React from "react";
 import classNames from "classnames/bind";
 import styles from "./DefaultLayout.module.sass";
 import { useMediaQuery } from "react-responsive";
+import MenuBar from "./MenuBar/MenuBar";
 
 const cx = classNames.bind(styles);
 
-const DefaultLayout = () => {
+const DefaultLayout = ({children}) => {
   const isMobile = useMediaQuery({ query: `(max-width: 739px)` });
   return (
     <div className={cx("wrapper")}>
-      <span className={cx("bg-attachment")}>
-        <h1>{isMobile ? "GAVIN" : <marquee>GAVIN</marquee>}</h1>
+      <MenuBar />
+      <span className={cx("bg-attachment", 'container-fluid')}>
+        <h1>GAVIN</h1>
       </span>
+      {children}
     </div>
   );
 };

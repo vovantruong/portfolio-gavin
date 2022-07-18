@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600;700&family=Inter:wght@100;300;400;500;700&family=Teko:wght@400;500;600;700&display=swap')
 @import ./global
 @import ./theme
+@import ./container
 
 *
     margin: 0
@@ -9,13 +10,17 @@
 
 html
     font-size: 62.5%
+    &::-webkit-scrollbar
+        display: none
+    @media only screen and (max-width: 64em)
+        font-size: 50%
 
 body
     font-size: 1.6rem
     line-height: 1.5
     font-weight: 400
     min-width: 375px
-    
+    +Inter
 
 a
     text-decoration: none
@@ -36,7 +41,7 @@ output, ruby, section, summary,time, mark, audio, video
     padding: 0
     border: 0
     vertical-align: baseline
-    
+
 img,fieldset, a img
     border: none
 input[type="text"],
@@ -74,4 +79,3 @@ html
 @media (prefers-reduced-motion: reduce)
     *
         transition: none !important
-

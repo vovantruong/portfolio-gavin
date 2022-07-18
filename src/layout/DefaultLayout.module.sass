@@ -2,9 +2,6 @@
 
 .wrapper
     overflow: hidden
-    max-width: 1280px
-    width: 100%
-    margin: 0 auto
 
 .bg-attachment
     position: fixed
@@ -12,21 +9,23 @@
     left: 0
     right: 0
     bottom: 0
-    z-index: 0
+    z-index: -1
     h1
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%,-50%)
-        color: #01228b0a
+        color: #dbe5ff
         font-size: 50rem
         letter-spacing: 1rem
-        +teko
+        +Teko
         font-weight: 700
         display: flex
+        justify-content: center
+        align-items: center
         width: 100%
         +dark
-            color: #171e3424
+            color: #15071d
         +x
             font-size: 45rem
         +d
