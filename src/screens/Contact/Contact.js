@@ -4,9 +4,9 @@ import styles from './Contact.module.sass'
 
 const cx = classNames.bind(styles)
 
-const Contact = () => {
+const Contact = ({id}) => {
   return(
-    <div className={cx('')}>
+    <div id={id} className={cx('contact')}>
         Contact
     </div>
   )

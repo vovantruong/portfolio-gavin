@@ -4,9 +4,9 @@ import styles from './Skills.module.sass'
 
 const cx = classNames.bind(styles)
 
-const Skills = () => {
+const Skills = ({id}) => {
   return(
-    <div className={cx('')}>
+    <div id={id} className={cx('skills')}>
         Skills
     </div>
   )

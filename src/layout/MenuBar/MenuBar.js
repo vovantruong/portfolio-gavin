@@ -13,31 +13,37 @@ import IcBookDark from "../../assets/image/logo-book-dark.svg";
 import IcBookLight from "../../assets/image/logo-book-light.svg";
 import useDarkMode from "../../theme/useDarkMode";
 import { MediaQueryContext } from "../../Context/MediaQueryContext";
+import ScrollIntoView from "react-scroll-into-view";
 
 const cx = classNames.bind(styles);
 
 const dataIcon = [
   {
+    id: "project",
     iconDark: IcBookDark,
     iconLight: IcBookLight,
     name: "Project",
   },
   {
+    id: "skills",
     iconDark: IcBagDark,
     iconLight: IcBaglight,
     name: "Skill",
   },
   {
+    id: "home",
     iconDark: IcHomeDark,
     iconLight: IcHomeLight,
     name: "Home",
   },
   {
+    id: "about",
     iconDark: IcBarDark,
     iconLight: IcBarLight,
     name: "About me",
   },
   {
+    id: "contact",
     iconDark: IcPhoneDark,
     iconLight: IcPhoneLight,
     name: "Contact",
@@ -50,7 +56,6 @@ const MenuBar = () => {
 
   const isMobile = useContext(MediaQueryContext);
 
-  console.log(isMobile);
   return (
     <div className={cx("side-bar")}>
       <div className={cx("wrapper")}>
@@ -61,15 +66,21 @@ const MenuBar = () => {
               key={index}
               className={cx({ ["active"]: active === index })}
             >
-              <div className={cx("logo-img")}>
-                <img
-                  src={darkmode ? logo.iconDark : logo.iconLight}
-                  alt="..."
-                />
-              </div>
-              <div className={cx("name")}>
-                <span>{logo.name}</span>
-              </div>
+              <ScrollIntoView
+                smooth
+                selector={`#${logo.id}`}
+                className={cx("on-scroll")}
+              >
+                <div className={cx("logo-img")}>
+                  <img
+                    src={darkmode ? logo.iconDark : logo.iconLight}
+                    alt="..."
+                  />
+                </div>
+                <div className={cx("name")}>
+                  <span>{logo.name}</span>
+                </div>
+              </ScrollIntoView>
             </li>
           ))}
           <div className={cx("wrap-cricle")}>

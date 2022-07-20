@@ -4,9 +4,9 @@ import styles from './AboutMe.module.sass'
 
 const cx = classNames.bind(styles)
 
-const AboutMe = () => {
+const AboutMe = ({id}) => {
   return(
-    <div className={cx('')}>
+    <div id={id} className={cx('about')}>
         AboutMe
     </div>
   )

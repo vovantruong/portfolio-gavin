@@ -14,12 +14,12 @@ function App() {
   return (
     <div className="App">
       <ToggleThemes />
-      <DefaultLayout >
-        {/* <Projects />
-        <Skills /> */}
-        <Home />
-        {/* <AboutMe />
-        <Contact /> */}
+      <DefaultLayout>
+        <Projects id="project"/>
+        <Skills id="skills"/>
+        <Home id="home"/>
+        <AboutMe id="about"/>
+        <Contact id="contact"/>
       </DefaultLayout>
     </div>
   );

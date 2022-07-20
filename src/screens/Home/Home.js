@@ -9,10 +9,12 @@ const style = {
   height: '100vh'
 }
 
-const Home = () => {
+const Home = ({id}) => {
   return(
-    <div style={style} className={cx('')}>
+    <div id={id} style={style} className={cx('home')}>
+      <div className='container'>
         Home
+      </div>
     </div>
   )
 }
