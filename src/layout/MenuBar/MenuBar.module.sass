@@ -4,7 +4,7 @@
     top: 0
     right: 0
     bottom: 0
-    +m
+    +t
         top: unset
         bottom: 0
         left: 0
@@ -15,7 +15,7 @@
         background: $whitegray
         +dark
             background: $darkblue
-        +m
+        +t
             width: 100%
             height: 8rem
         ul
@@ -27,7 +27,7 @@
             width: 100%
             height: 100%
             gap: 1rem
-            +m
+            +t
                 flex-direction: row
             li
                 cursor: pointer
@@ -65,7 +65,7 @@
                     align-items: center
                     justify-content: center
                     box-shadow: -3px 6px 10px rgba(0,0,0,0.1)
-                    +m
+                    +t
                         left: unset
                         top: -6rem
                     span
@@ -83,7 +83,7 @@
                         border-bottom: 1rem solid transparent
                         +dark
                             border-left-color: #1f25585e
-                        +m
+                        +t
                             left: unset
                             top: 100%
                             border-left: 1rem solid transparent
@@ -113,7 +113,7 @@
                 position: relative
                 z-index: 1
                 transform: translateX(-3.5rem)
-                +m
+                +t
                     transform: translateY(-3.5rem)
 
             li.active
@@ -171,3 +171,47 @@
                     +dark
                         box-shadow: -16px 0 0 $bgdark
                         background: $darkblue
+
+                &__wrap-dot
+                    width: 100%
+                    height: 100%
+                    animation: rotate 4s infinite linear
+
+                &__dot-1, &__dot-2, &__dot-3
+                    position: absolute
+                    border-radius: 50%
+
+                &__dot-1
+                    width: 6px
+                    height: 6px
+                    top: -1rem
+                    left: 0.5rem
+                    background: $whitegray
+                    +dark
+                        background: $darkblue
+
+                &__dot-2
+                    width: 10px
+                    height: 10px
+                    top: 0
+                    left: -1.3rem
+                    background: $whitegray
+                    +dark
+                        background: $darkblue
+                &__dot-3
+                    width: 15px
+                    height: 15px
+                    top: 1.7rem
+                    left: -2.7rem
+                    background: $whitegray
+                    +dark
+                        background: $darkblue
+                @keyframes rotate
+                    0%
+                        transform: rotateZ(0)
+                    70%
+                        transform: rotateZ(-120deg)
+                    // 70%
+                    //     transform: rotateZ(-90deg)
+                    100%
+                        transform: rotateZ(-360deg)

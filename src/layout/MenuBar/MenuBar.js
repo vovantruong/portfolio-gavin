@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import classNames from "classnames/bind";
 import styles from "./MenuBar.module.sass";
 import IcHomeDark from "../../assets/image/logo-home-dark.svg";
@@ -20,12 +20,12 @@ const dataIcon = [
   {
     iconDark: IcBookDark,
     iconLight: IcBookLight,
-    name: "Book",
+    name: "Project",
   },
   {
     iconDark: IcBagDark,
     iconLight: IcBaglight,
-    name: "Bag",
+    name: "Skill",
   },
   {
     iconDark: IcHomeDark,
@@ -33,14 +33,14 @@ const dataIcon = [
     name: "Home",
   },
   {
+    iconDark: IcBarDark,
+    iconLight: IcBarLight,
+    name: "About me",
+  },
+  {
     iconDark: IcPhoneDark,
     iconLight: IcPhoneLight,
     name: "Contact",
-  },
-  {
-    iconDark: IcBarDark,
-    iconLight: IcBarLight,
-    name: "Bar",
   },
 ];
 
@@ -72,7 +72,13 @@ const MenuBar = () => {
               </div>
             </li>
           ))}
-          <div className={cx("wrap-cricle")}></div>
+          <div className={cx("wrap-cricle")}>
+            <div className={cx("wrap-cricle__wrap-dot")}>
+              <span className={cx("wrap-cricle__dot-1")}></span>
+              <span className={cx("wrap-cricle__dot-2")}></span>
+              <span className={cx("wrap-cricle__dot-3")}></span>
+            </div>
+          </div>
         </ul>
       </div>
     </div>

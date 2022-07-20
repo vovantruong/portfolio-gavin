@@ -4,9 +4,14 @@ import styles from './Home.module.sass'
 
 const cx = classNames.bind(styles)
 
+const style = {
+  width: '100%',
+  height: '100vh'
+}
+
 const Home = () => {
   return(
-    <div className={cx('container')}>
+    <div style={style} className={cx('')}>
         Home
     </div>
   )
